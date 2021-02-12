@@ -41,6 +41,7 @@
 #include <libfwupdplugin/fu-efivar.h>
 #include <libfwupdplugin/fu-udev-device.h>
 #include <libfwupdplugin/fu-usb-device.h>
+#include <libfwupdplugin/fu-bluetooth-device.h>
 #include <libfwupdplugin/fu-volume.h>
 
 #ifndef FWUPD_DISABLE_DEPRECATED

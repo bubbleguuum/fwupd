@@ -52,6 +52,7 @@
 #include "fu-security-attrs-private.h"
 #include "fu-smbios-private.h"
 #include "fu-udev-device-private.h"
+#include "fu-bluetooth-device.h"
 
 #ifdef HAVE_GUDEV
 #include "fu-udev-backend.h"
@@ -59,6 +60,7 @@
 #ifdef HAVE_GUSB
 #include "fu-usb-backend.h"
 #endif
+#include "fu-bluez-backend.h"
 
 #include "fu-dfu-firmware.h"
 #include "fu-dfuse-firmware.h"
@@ -6562,6 +6564,7 @@ fu_engine_init (FuEngine *self)
 #ifdef HAVE_GUDEV
 	g_ptr_array_add (self->backends, fu_udev_backend_new (self->udev_subsystems));
 #endif
+	g_ptr_array_add (self->backends, fu_bluez_backend_new ());
 
 	/* setup Jcat context */
 	self->jcat_context = jcat_context_new ();

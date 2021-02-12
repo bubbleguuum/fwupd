@@ -53,6 +53,7 @@ daemon_src = [
   'fu-backend.c',
   'fu-remote-list.c',
   'fu-security-attr.c',
+  'fu-bluez-backend.c',
 ] + systemd_src
 
 if get_option('gudev')
